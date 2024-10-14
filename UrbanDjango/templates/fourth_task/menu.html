@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <link rel = "stylesheet" type="text/css" href="{%static 'style.css'%}">
+</head>
+<body>
+    <pagename>
+        {% block pagename %}
+            <h1>{{  head  }}</h1>
+        {% endblock %}
+    </pagename>>
+
+    <menu>
+        {% block menu %}
+        <a href="http://127.0.0.1:8000/">Главная</a><br>
+        <a href="http://127.0.0.1:8000/page1/">Магазин</a><br>
+        <a href="http://127.0.0.1:8000/page2/">Корзина</a>
+        {% endblock %}
+    </menu>>
+    <content>
+        {% block content %}
+        {% endblock %}
+    </content>>
+</body>
+</html>

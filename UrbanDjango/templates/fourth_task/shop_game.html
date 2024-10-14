@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "menu.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block pagename %}
+        <h1>{{ head }}</h1>
+    {% endblock %}
+
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block content %}
+    <ul>
+        {% for game in games %}
+            <li>{{ game }} <button><a>{{ button }}</a></button></li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>
